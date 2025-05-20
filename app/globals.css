@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("/fonts/Minecraftia-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #1e1e1e;
+  --foreground: #f4ead5;
+
+  --card: #1e1e1e;
+  --card-foreground: #f4ead5;
+
+  --popover: #1e1e1e;
+  --popover-foreground: #f4ead5;
+
+  --primary: #b22222;
+  --primary-foreground: #f4ead5;
+
+  --secondary: #3ddc97;
+  --secondary-foreground: #f4ead5;
+
+  --muted: #1e1e1e;
+  --muted-foreground: #7d7d7d;
+
+  --accent: #6a0dad;
+  --accent-foreground: #f4ead5;
+
+  --destructive: #b22222;
+  --destructive-foreground: #f4ead5;
+
+  --border: #7d7d7d;
+  --input: #7d7d7d;
+  --ring: #6a0dad;
+
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: "Minecraft", monospace;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 2s ease-in-out infinite;
+}
+
+.animate-flicker-delay {
+  animation: flicker 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 190, 11, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 190, 11, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 190, 11, 0.5);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
